@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    //submit-form
     $("#customer-register").submit(function () {
         var url = "php/register.php";
         var formData = $("#customer-register");
@@ -25,4 +25,10 @@ $(document).ready(function () {
         });
         return false;
     });
+
+    //effect-form
+    $('#button').hover(function () {
+        $('#button').css({'border' : '2px solid red'})
+    });
+
 });
