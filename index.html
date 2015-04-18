@@ -5,20 +5,33 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <meta charset="utf-8">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="js/main.js"></script>
+    <script src="js/registration.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/ajax.js"></script>
 </head>
 <body>
 
 <div id="main">
-    <form id="customer-register">
+    <form id="customer-register" action="php/register.php">
         <h1>My Business Card</h1>
+
         <p>Pass me your info & mine will make it's way to your inbox!</p>
-        <input type="text" name="name" placeholder="Name" class="fields name">
-        <input type="text" name="email" placeholder="Email" class="fields email">
-        <input type="text" name="phone" placeholder="Phone" class="fields phone">
+        <input type="text" name="name" placeholder="Name" class="validate-name fields">
+        <input type="text" name="email" placeholder="Email" class="validate-email fields">
+        <input type="text" name="phone" placeholder="Phone" class="validate-phone fields">
         <input type="submit" name="submit" class="button" value="lets connect!">
     </form>
 </div>
+<script>
+    $(document).ready(function () {
+        $("#customer-register").submit(function () {
+            event.preventDefault();
+            var registerFormID = "#" + $(this).attr('id');
+            Register.registerCustomer(registerFormID);
+        });
+    });
+
+</script>
 
 </body>
 </html>

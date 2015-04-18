@@ -24,7 +24,7 @@ p {
     display: block;
     height: 50px;
     padding-left: 10px;
-
+    background-color: #ffffff;
 }
 
 .button {
@@ -40,15 +40,29 @@ p {
     text-transform: uppercase;
 }
 
-.name {
+.validate-name {
     background: url(https://www.formstack.com/forms/images/user/484005/image_iconperson.png) right no-repeat #ffffff;
 }
 
-.email {
+.validate-email {
     background:url(https://www.formstack.com/forms/images/user/484005/image_iconemail.png) right no-repeat #ffffff;
 }
 
-.phone {
+.validate-phone {
     background: url(https://www.formstack.com/forms/images/user/484005/image_iconphone.png) right no-repeat #ffffff;
 }
+
+.button:active {
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+.red_field {
+    border: 2px solid red;
+}
+
+.formInputError {
+    border: 2px solid red;
+}
+
 

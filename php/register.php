@@ -1,10 +1,10 @@
 <?php
 
 $response = array(
-    'status' => '0',
+    'status' => '1',
     'errors'=> array(
         'email'=>'email already exists',
-        'street'=>'street has incorrect value',
+        'name'=>'street has incorrect value',
         'phone'=>'phone has incorrect value',
     ),
 );
