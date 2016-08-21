@@ -11,6 +11,7 @@ var AjaxSend = {
                 alert('Customer was created');
             } else {
                 var errors = returnedData.errors;
+                
                 jQuery.each(errors, function (key, value) {
                     alert(value);
                     alert(key);
