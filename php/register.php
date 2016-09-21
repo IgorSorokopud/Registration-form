@@ -1,5 +1,4 @@
 <?php
-
 $response = array(
     'status' => '1',
     'errors'=> array(
@@ -8,5 +7,4 @@ $response = array(
         'phone'=>'phone has incorrect value',
     ),
 );
-
 echo json_encode($response);
